@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,600&display=swap");
+// Set your brand colors
+$purple: #8a4d76;
+$pink: #fa7c91;
+$brown: #757763;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+
+// Update Bulma's global variables
+$family-sans-serif: "Rubik", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: #fff;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/form.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
+// @import "flatpickr/dist/themes/material_green.css";
+.body {
+  font-size: 14px;
+}
+.navbar {
+  background: transparent;
+  font-weight: 400;
+  height: 80px;
+  line-height: 1.43;
+  position: absolute;
+  width: 100%;
+  padding: 0 14px 0 14px;
+  a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    border: $control-border-width solid transparent;
+    transition: border 0.3s;
+    letter-spacing: 0.8px;
+    &:hover {
+      border-bottom: $control-border-width solid #fff;
+    }
+  }
+  &:hover {
+    color: #fff;
+  }
+  .navbar-brand {
+    font-size: 34px;
+  }
+}
+.hero {
+  height: 100vh;
+  position: relative;
+  background-image: url("https://a0.muscache.com/4ea/air/r:w775-h518-sfit,e:fjpg-c80/pictures/0ffd8594-f123-43f0-85bb-7ef88c6f0624.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  .column {
+    margin-top: 80px;
+    padding-left: 48px;
+  }
+  .card {
+    width: 441px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 32px;
+    padding-bottom: 24px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12) !important;
+  }
+  .heading h1 {
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: normal;
+    color: #484848;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .label {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    color: #484848;
+  }
+  .input-box {
+    -webkit-box-align: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    position: relative;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    display: flex;
+    height: 48px;
+    width: 100%;
+    flex-direction: row-reverse;
+    button {
+      height: 100%;
+      background-color: #ff5a5f;
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-weight: 600;
+      border: #ff5a5f;
+    }
+    input {
+      font-size: 17px;
+      background-color: transparent;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      text-overflow: ellipsis;
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+    input[type="date"] {
+      color: #727272;
+    }
+    select {
+      font-size: 17px;
+      background-color: transparent;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      text-overflow: ellipsis;
+      color: #727272;
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}
